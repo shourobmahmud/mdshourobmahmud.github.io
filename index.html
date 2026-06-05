@@ -1,36 +1,348 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Md. Shourob Mahmud</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Shourob Mahmud | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b1f3a;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #d6e4ff;
+    }
+
+    nav {
+      background: #102f55;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #0b1f3a;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #0b1f3a;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #102f55;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+
+    .hero-box {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .tagline {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #f8fafc;
+      padding: 20px;
+      border-left: 5px solid #0b1f3a;
+      border-radius: 8px;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      padding: 20px;
+      margin-top: 15px;
+      border-radius: 8px;
+      border-left: 5px solid #102f55;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0b1f3a;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #163d6b;
+    }
+
+    footer {
+      background: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      section {
+        margin: 20px;
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <header>
     <h1>Md. Shourob Mahmud</h1>
+    <p>Mechanical Engineering Undergraduate | RUET</p>
+    <p>Research Enthusiast in Composite Materials, IoT, Robotics & Smart Manufacturing</p>
+  </header>
 
-    <h2>Mechanical Engineering Undergraduate</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <section id="about">
+    <div class="hero-box">
+      <h2>About Me</h2>
+      <p class="tagline">
+        I am a Mechanical Engineering undergraduate at Rajshahi University of Engineering & Technology (RUET), 
+        with a strong academic background and interest in research, engineering design, IoT systems, robotics, 
+        composite materials, and sustainable technologies.
+      </p>
+    </div>
+
+    <div class="info-grid">
+      <div class="card">
+        <h3>Academic Status</h3>
+        <p>B.Sc. in Mechanical Engineering</p>
+        <p>Rajshahi University of Engineering & Technology</p>
+      </div>
+
+      <div class="card">
+        <h3>CGPA</h3>
+        <p>3.91 / 4.00</p>
+      </div>
+
+      <div class="card">
+        <h3>Research Direction</h3>
+        <p>Composite Materials, Natural Fiber Composites, Nanocomposites, IoT, and Robotics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <h3>Undergraduate Thesis</h3>
     <p>
-        Rajshahi University of Engineering & Technology (RUET)
+      <strong>Title:</strong> Development of Bamboo–Jute Fiber Reinforced Epoxy Hybrid Composites Modified with 
+      Nanoclay Nanoparticles for Enhanced Mechanical, Thermal, and Moisture Resistance Properties.
     </p>
 
-    <p>
-        CGPA: 3.91/4.00
-    </p>
+    <h3>Research Objectives</h3>
+    <ul>
+      <li>To improve the mechanical properties of natural fiber-reinforced epoxy composites.</li>
+      <li>To enhance thermal stability using nanoclay modification.</li>
+      <li>To reduce moisture absorption behavior of bamboo–jute hybrid composites.</li>
+      <li>To explore sustainable and biodegradable composite material applications.</li>
+    </ul>
 
+    <h3>Research Interests</h3>
+    <ul>
+      <li>Natural Fiber Reinforced Polymer Composites</li>
+      <li>Nanoclay Modified Epoxy Composites</li>
+      <li>Mechanical Testing and Materials Characterization</li>
+      <li>SEM, XRD, and Thermal Analysis</li>
+      <li>Sustainable Engineering Materials</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Engineering Projects</h2>
+
+    <div class="project-card">
+      <h3>Smart Watering System</h3>
+      <p>
+        Developed an IoT-based automatic plant watering system using ESP32, soil moisture sensor, relay module, 
+        OLED display, water pump, and Blynk IoT platform.
+      </p>
+      <ul>
+        <li>Real-time soil moisture monitoring</li>
+        <li>Automatic pump control</li>
+        <li>Blynk IoT dashboard integration</li>
+        <li>OLED-based local display system</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>RFID-Based Door Lock System</h3>
+      <p>
+        Designed a security access system using Arduino, RFID module, keypad, relay, LCD display, and solenoid lock.
+      </p>
+      <ul>
+        <li>RFID-based authentication</li>
+        <li>Password-based access control</li>
+        <li>LCD user interface</li>
+        <li>Relay-controlled locking mechanism</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h3>Gas Leakage Detection System</h3>
+      <p>
+        Developed a gas leakage detection system using MQ-2 sensor, Arduino, GSM module, buzzer, LEDs, and LCD display.
+      </p>
+      <ul>
+        <li>Gas concentration detection</li>
+        <li>GSM-based alert system</li>
+        <li>Visual and audio warning system</li>
+        <li>Emergency safety monitoring</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="info-grid">
+      <div class="card">
+        <h3>Engineering Software</h3>
+        <ul>
+          <li>ANSYS</li>
+          <li>SolidWorks</li>
+          <li>MATLAB</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Programming & IoT</h3>
+        <ul>
+          <li>Arduino</li>
+          <li>ESP32</li>
+          <li>C/C++</li>
+          <li>Blynk IoT</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Research Skills</h3>
+        <ul>
+          <li>Composite Fabrication</li>
+          <li>Mechanical Testing</li>
+          <li>SEM Analysis</li>
+          <li>XRD Analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership">
+    <h2>Leadership & Activities</h2>
+
+    <h3>IMechE RUET Student Chapter</h3>
     <p>
-        Research Interests:
+      Coordinator, Creative & Media
     </p>
 
     <ul>
-        <li>Composite Materials</li>
-        <li>Nanocomposites</li>
-        <li>IoT Systems</li>
-        <li>Robotics</li>
-        <li>Renewable Energy</li>
+      <li>Contributed to student chapter activities and event promotion.</li>
+      <li>Supported technical event communication and media coordination.</li>
+      <li>Developed leadership, teamwork, and professional communication skills.</li>
     </ul>
 
-</body>
+    <h3>Industrial Training</h3>
+    <p>
+      Completed industrial attachment at Bangladesh Industrial Technical Assistance Center (BITAC), Dhaka.
+    </p>
+  </section>
 
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p><strong>Email:</strong> your-email@gmail.com</p>
+    <p><strong>GitHub:</strong> https://github.com/yourusername</p>
+    <p><strong>LinkedIn:</strong> Add your LinkedIn profile link here</p>
+
+    <a class="button" href="mailto:your-email@gmail.com">Contact Me</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Md. Shourob Mahmud. All Rights Reserved.</p>
+  </footer>
+
+</body>
 </html>
