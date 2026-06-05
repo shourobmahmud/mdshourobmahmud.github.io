@@ -64,25 +64,25 @@
       color: #ffd166;
     }
     
-.gallery {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+.gallery{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:25px;
 }
 
-.gallery img {
-    width: 300px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: 0.3s;
+.gallery img{
+    width:320px;
+    height:240px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.gallery img:hover{
+    transform:translateY(-5px);
 }
     section {
       max-width: 1100px;
@@ -263,29 +263,39 @@
 
   <section id="projects">
     <h2>Engineering Projects</h2>
+<div class="project-card">
 
-    <div class="project-card">
-      <h3>Smart Watering System</h3>
+<h3>Smart Watering System</h3>
 
 <p>
-An IoT-based automatic irrigation system using ESP32,
-soil moisture sensor, relay module, water pump,
-OLED display and Blynk IoT.
+Designed and developed an IoT-based Smart Watering System using the Seeed Studio XIAO ESP32-C6 microcontroller,
+soil moisture sensing, rain detection, OLED monitoring, relay-based pump control, and Blynk IoT cloud integration.
+The system automatically irrigates plants based on soil moisture conditions while allowing real-time remote monitoring and control.
 </p>
 
-<div class="gallery">
-    <img src="project1/p11.jpeg" alt="Smart Watering System">
-    <img src="project1/p12.jpeg" alt="Smart Watering System">
-    <img src="project1/p14.jpeg" alt="Smart Watering System">
-</div>
-      <ul>
-        <li>Real-time soil moisture monitoring</li>
-        <li>Automatic pump control</li>
-        <li>Blynk IoT dashboard integration</li>
-        <li>OLED-based local display system</li>
-      </ul>
-    </div>
+<ul>
+<li>Automatic irrigation control</li>
+<li>Real-time soil moisture monitoring</li>
+<li>Rain detection integration</li>
+<li>Remote monitoring through Blynk IoT</li>
+<li>OLED-based local display interface</li>
+<li>Manual and automatic operating modes</li>
+</ul>
 
+<div class="gallery">
+
+<img src="project1/p11.jpeg"
+alt="Smart Watering System Overview">
+
+<img src="project1/p12.jpeg"
+alt="XIAO ESP32-C6 Controller">
+
+<img src="project1/p14.jpeg"
+alt="Blynk IoT Dashboard">
+
+</div>
+
+</div>
     <div class="project-card">
       <h3>RFID-Based Door Lock System</h3>
       <p>
