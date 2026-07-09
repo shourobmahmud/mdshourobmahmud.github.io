@@ -3,565 +3,503 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Shourob Mahmud | Portfolio</title>
+
+  <title>Md. Shourob Mahmud | Academic Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    :root{
+      --primary:#0b1f3a;
+      --secondary:#102f55;
+      --accent:#ffd166;
+      --bg:#f4f6f8;
+      --card:#ffffff;
+      --soft:#f8fafc;
+      --text:#222;
+      --shadow:0 8px 24px rgba(0,0,0,0.12);
     }
 
-    body {
-      background: #f4f6f8;
-      color: #222;
-      line-height: 1.6;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);line-height:1.7;}
+
+    header{
+      background:linear-gradient(135deg,var(--primary),#163d6b);
+      color:white;
+      padding:70px 20px 55px;
+      text-align:center;
     }
 
-    header {
-      background: #0b1f3a;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    
-.profile-photo {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid white;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-    header h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
+    .profile-photo{
+      width:200px;
+      height:200px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:50%;
+      border:5px solid white;
+      margin-bottom:20px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.35);
     }
 
-    header p {
-      font-size: 18px;
-      color: #d6e4ff;
+    header h1{font-size:42px;letter-spacing:1.2px;margin-bottom:10px;}
+    header p{font-size:18px;color:#d6e4ff;margin-bottom:6px;}
+
+    nav{
+      background:var(--secondary);
+      padding:15px 10px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 14px rgba(0,0,0,0.18);
     }
 
-    nav {
-      background: #102f55;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 11px;
+      font-weight:bold;
+      font-size:15px;
+      transition:0.25s;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+    nav a:hover{color:var(--accent);}
+
+    section{
+      max-width:1120px;
+      margin:32px auto;
+      padding:34px;
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:0 4px 16px rgba(0,0,0,0.08);
     }
 
-    nav a:hover {
-      color: #ffd166;
+    h2{
+      color:var(--primary);
+      margin-bottom:18px;
+      border-bottom:3px solid var(--primary);
+      display:inline-block;
+      padding-bottom:6px;
     }
-    
-.gallery{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
 
-.gallery img{
-    width:320px;
-    height:240px;
-    object-fit:cover;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    transition:0.3s;
-}
+    h3{color:var(--secondary);margin-top:20px;margin-bottom:8px;}
+    p{margin-bottom:10px;}
+    ul{margin-left:24px;margin-top:10px;margin-bottom:10px;}
 
-.dashboard-photo{
-    width:320px;
-    height:600px;
-    object-fit:center;
-    background:white;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-    .industrial-gallery{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    margin-top:25px;
-}
+    .tagline{font-size:19px;color:#333;text-align:justify;}
 
-.industrial-card{
-    width:340px;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    transition:0.3s;
-}
+    .info-grid,.stats-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      margin-top:22px;
+    }
 
-.industrial-card:hover{
-    transform:translateY(-8px);
-}
+    .card{
+      background:var(--soft);
+      padding:22px;
+      border-left:5px solid var(--primary);
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    }
 
-.industrial-card img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
-}
+    .stat-card{
+      background:var(--primary);
+      color:white;
+      padding:22px;
+      border-radius:14px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .stat-card h3{color:var(--accent);font-size:28px;margin:0;}
+
+    .project-card{
+      background:var(--soft);
+      padding:24px;
+      margin-top:20px;
+      border-radius:14px;
+      border-left:5px solid var(--secondary);
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .badge{
+      display:inline-block;
+      background:#e8f0fe;
+      color:var(--primary);
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:14px;
+      margin:5px 5px 5px 0;
+      font-weight:bold;
+    }
+
+    .button{
+      display:inline-block;
+      background:var(--primary);
+      color:white;
+      padding:12px 20px;
+      margin:10px 8px 0 0;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .button:hover{background:#163d6b;transform:translateY(-2px);}
+
+    .gallery,.industrial-gallery{
+      display:flex;
+      gap:22px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .gallery img{
+      width:320px;
+      height:240px;
+      object-fit:cover;
+      border-radius:14px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.15);
+      transition:0.3s;
+      background:white;
+    }
+
+    .gallery img:hover,.industrial-card:hover{transform:translateY(-7px);}
+
+    .dashboard-photo{
+      width:320px !important;
+      height:560px !important;
+      object-fit:contain !important;
+      background:white;
+      padding:8px;
+    }
+
+    .industrial-card{
+      width:340px;
+      background:white;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 8px 22px rgba(0,0,0,0.15);
+      transition:0.3s;
+    }
+
+    .industrial-card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
 
     .certificate-photo{
-    width:100%;
-    height:420px;
-    object-fit:contain;
-    background:#ffffff;
-    padding:15px;
-}
-
-.industrial-card h3{
-    padding:15px 15px 5px;
-    color:#0b1f3a;
-}
-
-.industrial-card p{
-    padding:0 15px 15px;
-    text-align:justify;
-}
-    section {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      height:430px !important;
+      object-fit:contain !important;
+      background:white;
+      padding:15px;
     }
 
-    h2 {
-      color: #0b1f3a;
-      margin-bottom: 15px;
-      border-bottom: 3px solid #0b1f3a;
-      display: inline-block;
-      padding-bottom: 5px;
+    .industrial-card h3{padding:15px 15px 5px;color:var(--primary);}
+    .industrial-card p{padding:0 15px 18px;text-align:justify;color:#333;}
+
+    footer{
+      background:var(--primary);
+      color:white;
+      text-align:center;
+      padding:28px 18px;
+      margin-top:45px;
     }
 
-    h3 {
-      color: #102f55;
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
+    footer p{margin-bottom:5px;}
 
-    ul {
-      margin-left: 25px;
-      margin-top: 10px;
-    }
-
-    .hero-box {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      text-align: center;
-    }
-
-    .tagline {
-      font-size: 20px;
-      color: #333;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: #f8fafc;
-      padding: 20px;
-      border-left: 5px solid #0b1f3a;
-      border-radius: 8px;
-    }
-
-    .project-card {
-      background: #f8fafc;
-      padding: 20px;
-      margin-top: 15px;
-      border-radius: 8px;
-      border-left: 5px solid #102f55;
-    }
-
-    .button {
-      display: inline-block;
-      background: #0b1f3a;
-      color: white;
-      padding: 12px 20px;
-      margin-top: 15px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: #163d6b;
-    }
-
-    footer {
-      background: #0b1f3a;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 700px) {
-      header h1 {
-        font-size: 28px;
-      }
-
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-
-      section {
-        margin: 20px;
-        padding: 22px;
-      }
+    @media(max-width:768px){
+      header h1{font-size:30px;}
+      header p{font-size:16px;}
+      nav a{display:block;margin:9px 0;}
+      section{margin:22px 14px;padding:24px;}
+      .gallery img,.industrial-card{width:100%;}
+      .dashboard-photo{width:100% !important;height:auto !important;}
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-      <img src="images/profile1.jpeg" alt="Md. Shourob Mahmud" class="profile-photo">
-    <h1>MD. SHOUROB MAHMUD</h1>
-    <p>Mechanical Engineering Undergraduate | Rajshahi University of Engineering & Technology(RUET), Rajshahi, Bangladesh </p>
-    <p>Research Enthusiast in Composite Materials, IoT, Robotics & Smart Manufacturing</p>
-  </header>
+<header>
+  <img src="images/profile1.jpeg" alt="Md. Shourob Mahmud" class="profile-photo">
+  <h1>MD. SHOUROB MAHMUD</h1>
+  <p>Mechanical Engineering Undergraduate | Rajshahi University of Engineering & Technology (RUET)</p>
+  <p>Research Enthusiast in Composite Materials, IoT, Robotics & Smart Manufacturing</p>
+  <a class="button" href="files/Md_Shourob_Mahmud_CV.pdf" target="_blank">Download CV</a>
+  <a class="button" href="mailto:shourobmahmud.ruet@gmail.com">Contact Me</a>
+</header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#industrial">Industrial Training</a>
-     <a href="#leadership">Leadership</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#research">Research</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#industrial">Industrial</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#publications">Publications</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="about">
-    <div class="hero-box">
-      <h2>About Me</h2>
-      <p class="tagline">
-        I am a Mechanical Engineering undergraduate at Rajshahi University of Engineering & Technology (RUET), 
-        with a strong academic background and interest in research, engineering design, IoT systems, robotics, 
-        composite materials, and sustainable technologies.
-      </p>
+<section id="about">
+  <h2>About Me</h2>
+  <p class="tagline">
+    I am a Mechanical Engineering undergraduate at Rajshahi University of Engineering & Technology (RUET),
+    with a strong academic background and interests in research, engineering design, IoT systems, robotics,
+    composite materials, and sustainable technologies. My long-term academic goal is to pursue graduate research
+    in advanced materials, smart manufacturing, and intelligent engineering systems.
+  </p>
+
+  <div class="stats-grid">
+    <div class="stat-card"><h3>3.91</h3><p>CGPA / 4.00</p></div>
+    <div class="stat-card"><h3>3+</h3><p>Engineering Projects</p></div>
+    <div class="stat-card"><h3>1 Month</h3><p>Industrial Attachment</p></div>
+    <div class="stat-card"><h3>IMechE</h3><p>Leadership Role</p></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="info-grid">
+    <div class="card">
+      <h3>B.Sc. in Mechanical Engineering</h3>
+      <p><strong>Institution:</strong> Rajshahi University of Engineering & Technology (RUET)</p>
+      <p><strong>Location:</strong> Rajshahi, Bangladesh</p>
+      <p><strong>CGPA:</strong> 3.91 / 4.00</p>
+      <p><strong>Status:</strong> Undergraduate Student</p>
+    </div>
+    <div class="card">
+      <h3>Academic Focus</h3>
+      <p>Composite materials, polymer matrix composites, IoT systems, robotics, engineering design, and smart manufacturing.</p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <h3>Undergraduate Thesis</h3>
+  <p>
+    <strong>Title:</strong> Development of Bamboo-Jute Fiber Reinforced Epoxy Hybrid Composites Modified with
+    Nanoclay Nanoparticles for Enhanced Mechanical, Thermal, and Moisture Resistance Properties.
+  </p>
+
+  <div class="info-grid">
+    <div class="card">
+      <h3>Research Objectives</h3>
+      <ul>
+        <li>Improve mechanical properties of natural fiber-reinforced epoxy composites.</li>
+        <li>Enhance thermal stability using nanoclay reinforcement.</li>
+        <li>Reduce moisture absorption of bamboo-jute hybrid composites.</li>
+        <li>Explore sustainable engineering material applications.</li>
+      </ul>
     </div>
 
-    <div class="info-grid">
-      <div class="card">
-        <h3>Academic Status</h3>
-        <p>B.Sc. in Mechanical Engineering</p>
-        <p>Rajshahi University of Engineering & Technology</p>
-      </div>
-
-      <div class="card">
-        <h3>CGPA</h3>
-        <p>3.91 / 4.00</p>
-      </div>
-
-      <div class="card">
-        <h3>Research Direction</h3>
-        <p>Composite Materials, Natural Fiber Composites, Nanocomposites, IoT, and Robotics.</p>
-      </div>
+    <div class="card">
+      <h3>Methodology</h3>
+      <ul>
+        <li>Fiber treatment and surface modification.</li>
+        <li>Hand lay-up and compression molding fabrication.</li>
+        <li>Mechanical testing and property evaluation.</li>
+        <li>SEM, XRD, and thermal characterization.</li>
+      </ul>
     </div>
-  </section>
 
-  <section id="research">
-    <h2>Research</h2>
+    <div class="card">
+      <h3>Research Interests</h3>
+      <ul>
+        <li>Natural Fiber Reinforced Polymer Composites</li>
+        <li>Nanoclay Modified Epoxy Composites</li>
+        <li>Sustainable Engineering Materials</li>
+        <li>Materials Characterization</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <h3>Undergraduate Thesis</h3>
+<section id="projects">
+  <h2>Engineering Projects</h2>
+
+  <div class="project-card">
+    <h3>Smart Watering System</h3>
     <p>
-      <strong>Title:</strong> Development of Bamboo–Jute Fiber Reinforced Epoxy Hybrid Composites Modified with 
-      Nanoclay Nanoparticles for Enhanced Mechanical, Thermal, and Moisture Resistance Properties.
+      Designed and developed an IoT-based Smart Watering System using the Seeed Studio XIAO ESP32-C6 microcontroller,
+      soil moisture sensing, rain detection, OLED monitoring, relay-based pump control, and Blynk IoT cloud integration.
     </p>
 
-    <h3>Research Objectives</h3>
+    <span class="badge">ESP32-C6</span>
+    <span class="badge">Blynk IoT</span>
+    <span class="badge">OLED Display</span>
+    <span class="badge">Relay Control</span>
+    <span class="badge">Sensor Integration</span>
+
     <ul>
-      <li>To improve the mechanical properties of natural fiber-reinforced epoxy composites.</li>
-      <li>To enhance thermal stability using nanoclay modification.</li>
-      <li>To reduce moisture absorption behavior of bamboo–jute hybrid composites.</li>
-      <li>To explore sustainable and biodegradable composite material applications.</li>
+      <li>Automatic irrigation control</li>
+      <li>Real-time soil moisture monitoring</li>
+      <li>Rain detection integration</li>
+      <li>Remote monitoring through Blynk IoT</li>
+      <li>Manual and automatic operating modes</li>
     </ul>
 
-    <h3>Research Interests</h3>
-    <ul>
-      <li>Natural Fiber Reinforced Polymer Composites</li>
-      <li>Nanoclay Modified Epoxy Composites</li>
-      <li>Mechanical Testing and Materials Characterization</li>
-      <li>SEM, XRD, and Thermal Analysis</li>
-      <li>Sustainable Engineering Materials</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Engineering Projects</h2>
-<div class="project-card">
-
-<h3>Smart Watering System</h3>
-
-<p>
-Designed and developed an IoT-based Smart Watering System using the Seeed Studio XIAO ESP32-C6 microcontroller,
-soil moisture sensing, rain detection, OLED monitoring, relay-based pump control, and Blynk IoT cloud integration.
-The system automatically irrigates plants based on soil moisture conditions while allowing real-time remote monitoring and control.
-</p>
-
-<ul>
-<li>Automatic irrigation control</li>
-<li>Real-time soil moisture monitoring</li>
-<li>Rain detection integration</li>
-<li>Remote monitoring through Blynk IoT</li>
-<li>OLED-based local display interface</li>
-<li>Manual and automatic operating modes</li>
-</ul>
-
-<div class="gallery">
-
-<img src="project1/p11.jpeg"
-alt="Smart Watering System Overview">
-
-<img src="project1/p12.jpeg"
-alt="XIAO ESP32-C6 Controller">
-
-<img src="project1/p14.jpeg"
-alt="Blynk IoT Dashboard">
-
-</div>
-
-</div>
-    <div class="project-card">
-      <h3>RFID-Based Door Lock System</h3>
-      <p>
-        Designed a security access system using Arduino, RFID module, keypad, relay, LCD display, and solenoid lock.
-      </p>
-      <ul>
-        <li>RFID-based authentication</li>
-        <li>Password-based access control</li>
-        <li>LCD user interface</li>
-        <li>Relay-controlled locking mechanism</li>
-      </ul>
+    <div class="gallery">
+      <img src="project1/p11.jpeg" alt="Smart Watering System Overview">
+      <img src="project1/p12.jpeg" alt="XIAO ESP32-C6 Controller">
+      <img src="project1/p14.jpeg" class="dashboard-photo" alt="Blynk IoT Dashboard">
     </div>
+  </div>
 
-    <div class="project-card">
-      <h3>Gas Leakage Detection System</h3>
-      <p>
-        Developed a gas leakage detection system using MQ-2 sensor, Arduino, GSM module, buzzer, LEDs, and LCD display.
-      </p>
-      <ul>
-        <li>Gas concentration detection</li>
-        <li>GSM-based alert system</li>
-        <li>Visual and audio warning system</li>
-        <li>Emergency safety monitoring</li>
-      </ul>
-    </div>
-  </section>
+  <div class="project-card">
+    <h3>RFID-Based Door Lock System</h3>
+    <p>Designed a security access system using Arduino, RFID module, keypad, relay, LCD display, and solenoid lock.</p>
+    <span class="badge">Arduino</span>
+    <span class="badge">RFID</span>
+    <span class="badge">Keypad</span>
+    <span class="badge">LCD</span>
+    <span class="badge">Solenoid Lock</span>
+  </div>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-
-    <div class="info-grid">
-      <div class="card">
-        <h3>Engineering Software</h3>
-        <ul>
-          <li>ANSYS</li>
-          <li>SolidWorks</li>
-          <li>MATLAB</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Programming & IoT</h3>
-        <ul>
-          <li>Arduino</li>
-          <li>ESP32</li>
-          <li>C/C++</li>
-          <li>Blynk IoT</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Research Skills</h3>
-        <ul>
-          <li>Composite Fabrication</li>
-          <li>Mechanical Testing</li>
-          <li>SEM Analysis</li>
-          <li>XRD Analysis</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
- <section id="industrial">
-
-<h2>Industrial Attachment</h2>
-
-<p>
-Completed a one-month industrial attachment at the
-<strong>Bangladesh Industrial Technical Assistance Center (BITAC)</strong>,
-Dhaka, under the <strong>Advanced Training & Innovation Complex (ATIC)</strong>.
-The program provided comprehensive hands-on training in modern manufacturing,
-CNC machining, industrial metrology, heat treatment, renewable energy technologies,
-and engineering workshop practices. This industrial experience strengthened my
-practical engineering knowledge and complemented my academic studies through
-direct exposure to industrial processes and advanced manufacturing systems.
-</p>
-
-<ul>
-<li>CNC Machining and Manufacturing Processes</li>
-<li>Industrial Metrology and Precision Measurement</li>
-<li>Heat Treatment and Materials Engineering</li>
-<li>Renewable Energy Technologies</li>
-<li>Industrial Automation and Production Systems</li>
-<li>Engineering Workshop Practices</li>
-</ul>
-
-<div class="industrial-gallery">
-
-    <div class="industrial-card">
-
-        <img src="Industrial attachment/i1.jpeg"
-             alt="Advanced Training & Innovation Complex">
-
-        <h3>Advanced Training & Innovation Complex (ATIC)</h3>
-
-        <p>
-        Participated in practical industrial training at BITAC's
-        Advanced Training & Innovation Complex, gaining exposure
-        to modern manufacturing technologies and engineering practices.
-        </p>
-
-    </div>
-
-    <div class="industrial-card">
-
-        <img src="Industrial attachment/i2.jpeg"
-             alt="CNC Manufacturing Laboratory">
-
-        <h3>CNC Manufacturing Laboratory</h3>
-
-        <p>
-        Received practical training on CNC machining,
-        manufacturing processes, machine operation,
-        and industrial production techniques.
-        </p>
-
-    </div>
-
-    <div class="industrial-card">
-
-        <img src="Industrial attachment/i3.jpeg"
-             alt="Renewable Energy Laboratory">
-
-        <h3>Renewable Energy Laboratory</h3>
-
-        <p>
-        Explored renewable energy technologies,
-        including wind energy systems and their
-        engineering applications.
-        </p>
-
-    </div>
-
-    <div class="industrial-card">
-
-        <img src="Industrial attachment/bitac-industrial-attachment-certificate.jpeg"
-             class="certificate-photo"
-             alt="Industrial Attachment Certificate">
-
-        <h3>Certificate of Completion</h3>
-
-        <p>
-        Official certificate awarded by the Bangladesh Industrial
-        Technical Assistance Center (BITAC), recognizing the successful
-        completion of the Industrial Attachment Program at the
-        Advanced Training & Innovation Complex (ATIC), Dhaka.
-        </p>
-
-    </div>
-
-</div>
-
+  <div class="project-card">
+    <h3>Gas Leakage Detection System</h3>
+    <p>Developed a gas leakage detection system using MQ-2 gas sensor, Arduino, GSM module, buzzer, LEDs, and LCD display.</p>
+    <span class="badge">Arduino</span>
+    <span class="badge">MQ-2 Sensor</span>
+    <span class="badge">GSM Alert</span>
+    <span class="badge">LCD</span>
+    <span class="badge">Safety Monitoring</span>
+  </div>
 </section>
 
-    <section id="leadership">
-
-<h2>Leadership & Professional Activities</h2>
-
-<p>
-Served as the <strong>Coordinator (Creative & Media)</strong> of the
-Institution of Mechanical Engineers (IMechE) RUET Student Chapter.
-This leadership position provided opportunities to coordinate
-technical events, develop promotional content,
-manage digital communication,
-and collaborate with multidisciplinary teams,
-enhancing my leadership, organizational,
-communication, and project management skills.
-</p>
-
-<ul>
-<li>Technical Event Planning and Coordination</li>
-<li>Creative Design and Digital Media Management</li>
-<li>Engineering Workshop Promotion</li>
-<li>Professional Networking and Communication</li>
-<li>Student Engagement and Team Collaboration</li>
-<li>Leadership and Project Management</li>
-</ul>
-
-<div class="industrial-gallery">
-
-    <div class="industrial-card">
-
-        <img src="IMech/imech-coordinator.jpeg"
-             alt="Coordinator, Creative & Media">
-
-        <h3>Coordinator (Creative & Media)</h3>
-
-        <p>
-        Led creative and media activities for the IMechE RUET Student Chapter,
-        including event publicity, promotional content development,
-        social media management, and coordination of engineering events
-        to encourage student participation and professional engagement.
-        </p>
-
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="info-grid">
+    <div class="card">
+      <h3>Engineering Software</h3>
+      <ul><li>ANSYS</li><li>SolidWorks</li><li>MATLAB</li></ul>
     </div>
 
-</div>
+    <div class="card">
+      <h3>Programming & IoT</h3>
+      <ul><li>Arduino Programming</li><li>ESP32 Development</li><li>C/C++</li><li>Blynk IoT</li></ul>
+    </div>
 
+    <div class="card">
+      <h3>Research & Laboratory Skills</h3>
+      <ul><li>Composite Fabrication</li><li>Mechanical Testing</li><li>SEM Analysis</li><li>XRD Analysis</li></ul>
+    </div>
+  </div>
 </section>
-  <section id="contact">
-    <h2>Contact</h2>
 
-    <p><strong>Email:</strong> shourobmahmud.ruet@gmail.com</p>
-    <p><strong>GitHub:</strong>https://shourobmahmud.github.io/mdshourobmahmud.github.io/</p>
-    <p><strong>LinkedIn:</strong> www.linkedin.com/in/md-shourob-mahmud-602028326</p>
+<section id="industrial">
+  <h2>Industrial Attachment</h2>
+  <p>
+    Completed a one-month industrial attachment at the
+    <strong>Bangladesh Industrial Technical Assistance Center (BITAC)</strong>, Dhaka,
+    under the <strong>Advanced Training & Innovation Complex (ATIC)</strong>.
+    The program provided comprehensive hands-on training in modern manufacturing,
+    CNC machining, industrial metrology, heat treatment, renewable energy technologies,
+    and engineering workshop practices.
+  </p>
 
-    <a class="button" href="mailto:shourobmahmud.ruet@gmail.com">Contact Me</a>
-  <a class="button" href="files/Md_Shourob_Mahmud_CV.pdf" target="_blank">
-Download CV
-</a>
-  </section>
+  <ul>
+    <li>CNC Machining and Manufacturing Processes</li>
+    <li>Industrial Metrology and Precision Measurement</li>
+    <li>Heat Treatment and Materials Engineering</li>
+    <li>Renewable Energy Technologies</li>
+    <li>Industrial Automation and Production Systems</li>
+    <li>Engineering Workshop Practices</li>
+  </ul>
 
-  <footer>
-    <p>© 2026 Md. Shourob Mahmud. All Rights Reserved.</p>
-  </footer>
+  <div class="industrial-gallery">
+    <div class="industrial-card">
+      <img src="Industrial attachment/i1.jpeg" alt="Advanced Training & Innovation Complex">
+      <h3>Advanced Training & Innovation Complex (ATIC)</h3>
+      <p>Gained exposure to modern manufacturing technologies and practical engineering training facilities.</p>
+    </div>
+
+    <div class="industrial-card">
+      <img src="Industrial attachment/i2.jpeg" alt="CNC Manufacturing Laboratory">
+      <h3>CNC Manufacturing Laboratory</h3>
+      <p>Received practical training on CNC machining, machine operation, and industrial production techniques.</p>
+    </div>
+
+    <div class="industrial-card">
+      <img src="Industrial attachment/i3.jpeg" alt="Renewable Energy Laboratory">
+      <h3>Renewable Energy Laboratory</h3>
+      <p>Explored renewable energy technologies, including wind energy systems and engineering applications.</p>
+    </div>
+
+    <div class="industrial-card">
+      <img src="Industrial attachment/bitac-industrial-attachment-certificate.jpeg"
+           class="certificate-photo"
+           alt="Industrial Attachment Certificate">
+      <h3>Certificate of Completion</h3>
+      <p>
+        Official certificate awarded by BITAC recognizing successful completion of the Industrial Attachment Program
+        at the Advanced Training & Innovation Complex (ATIC), Dhaka.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <h2>Leadership & Professional Activities</h2>
+  <p>
+    Served as the <strong>Coordinator (Creative & Media)</strong> of the
+    Institution of Mechanical Engineers (IMechE) RUET Student Chapter.
+    This leadership position provided opportunities to coordinate technical events,
+    develop promotional content, manage digital communication, and collaborate with multidisciplinary teams.
+  </p>
+
+  <ul>
+    <li>Technical Event Planning and Coordination</li>
+    <li>Creative Design and Digital Media Management</li>
+    <li>Engineering Workshop Promotion</li>
+    <li>Professional Networking and Communication</li>
+    <li>Student Engagement and Team Collaboration</li>
+    <li>Leadership and Project Management</li>
+  </ul>
+
+  <div class="industrial-gallery">
+    <div class="industrial-card">
+      <img src="IMech/imech-coordinator.jpeg" alt="Coordinator, Creative & Media">
+      <h3>Coordinator (Creative & Media)</h3>
+      <p>
+        Led creative and media activities for IMechE RUET Student Chapter, including event publicity,
+        promotional content development, social media management, and engineering event coordination.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications & Academic Output</h2>
+  <div class="card">
+    <h3>Manuscript Under Preparation</h3>
+    <p>
+      Currently preparing undergraduate thesis work for future conference or journal publication.
+      This section will be updated with publications, DOI links, conference papers, posters, and research outputs.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:shourobmahmud.ruet@gmail.com">shourobmahmud.ruet@gmail.com</a></p>
+  <p><strong>Portfolio:</strong> <a href="https://mdshourobmahmud.github.io" target="_blank">mdshourobmahmud.github.io</a></p>
+  <p><strong>GitHub:</strong> <a href="https://github.com/mdshourobmahmud" target="_blank">github.com/mdshourobmahmud</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/md-shourob-mahmud-602028326" target="_blank">linkedin.com/in/md-shourob-mahmud-602028326</a></p>
+
+  <a class="button" href="mailto:shourobmahmud.ruet@gmail.com">Contact Me</a>
+  <a class="button" href="files/Md_Shourob_Mahmud_CV.pdf" target="_blank">Download CV</a>
+</section>
+
+<footer>
+  <p>© 2026 Md. Shourob Mahmud. All Rights Reserved.</p>
+  <p>Mechanical Engineering Undergraduate | Rajshahi University of Engineering & Technology</p>
+  <p>Designed and developed by Md. Shourob Mahmud</p>
+</footer>
 
 </body>
 </html>
